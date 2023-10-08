@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+  
+    background:rgb(188, 7, 244);
+    color:#fff;
+    margin: 0;
+    padding-top: 0px;
+      background-image: url(images/bg3.png);
+      margin-top: 0;
+      background-size:450px 500px; /* Cover the entire viewport */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-position: right top; /* Center the image horizontally and vertically */
+      margin: 10;
+      padding-bottom: 10px;
+  
+  }
+  
+  .container{
+    padding: 10px 5%;
+  
+  }
+  
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .logo
+  {
+    width:150px;
+    height: 150px;
+  }
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 15px;
+  }
+  nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    padding: 5px 10px;
+  }
+  nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+  nav ul li a:hover::after{
+    width: 100%;
+  }
+  .header-text{
+    margin-top:10%;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .header-text h1{
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .header-text h1 span{
+    color:black;
+  }
+  /* ... (your existing CSS rules) */
+  
+  #about {
+    background-color: rgba(9, 14, 39, 0.8); /* Background color for the about section */
+    color: #fff;
+    padding: 50px 20px; /* Adjust padding as needed */
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 128, 0.6);
+    margin-bottom: 40px;
+    position: relative;
+    padding-top: 20px;
+    
+    
+  }
+  #about:hover{
+    background-color: #733de7;
+  }
+  #about .container {
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    z-index: 2;
+  
+  }
+  
+  #about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  #about p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  #new-box {
+    background-image: url('images/lap2.jpg');
+    background-size: 100% 100%;
+    height: 70vh;
+    margin: 40px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: #fff;
+    padding: 10% 1%;
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    font-weight: 800;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-between;
+}
+
+#project {
+  position: relative; /* Add position relative for pseudo-element */
+  display: flex;
+  width: 100%;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  /* Other properties */
+  background-image: url('images/projects.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+#project::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute; /* Position it relative to the parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+  transition: background-color 0.3s; /* Add a transition for smooth effect */
+}
+
+#project:hover::before {
+  background-color: rgba(190, 127, 127, 0.5);  /* Add a background color on hover */
+}
+
+#project p {
+  text-align: center; /* Center the text horizontally */
+  z-index: 1; /* Place text above the pseudo-element */
+}
+
+
+
+
+#skils {
+  position: relative; /* Add position relative for pseudo-element */
+  display: flex;
+  width: 100%;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  /* Other properties */
+  background-image: url('images/skills.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden; /* Hide overflowing content for rounded corners */
+}
+
+#skils::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute; /* Position it relative to the parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+  transition: background-color 0.3s; /* Add a transition for smooth effect */
+}
+
+#skils p {
+  text-align: center; /* Center the text horizontally */
+  z-index: 1; /* Place text above the pseudo-element */
+}
+
+#skils:hover::before {
+  background-color: rgba(190, 127, 127, 0.5); /* Add a background color on hover */
+}
+
+
+
+#contact {
+  position: relative; /* Add position relative for pseudo-element */
+  display: flex;
+  width: 100%;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  /* Other properties */
+  background-image: url('images/contact.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden; /* Hide overflowing content for rounded corners */
+}
+
+#contact::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute; /* Position it relative to the parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+  transition: background-color 0.3s; /* Add a transition for smooth effect */
+}
+
+#contact p {
+  text-align: center; /* Center the text horizontally */
+  z-index: 1; /* Place text above the pseudo-element */
+}
+
+#contact:hover::before {
+  background-color: rgba(190, 127, 127, 0.5);  /* Add a background color on hover */
+}
+
+
+#achivements {
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 20px; /* Adjust padding as needed */
+  margin-top: 100px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 128, 0.6);
+  margin-bottom: 40px;
+  position: relative;
+  text-align: left; /* Center-align the content */
+  display: flex; /* Center content horizontally */
+  justify-content: center; /* Center content horizontally */
+  margin-left: 250px;
+  margin-right: 250px;
+}
+#achivements:hover{
+  background-color: #472491;
+}
+#achivements .container {
+  text-align: left;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  z-index: 2;
+
+}
+
+#achivements h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#achivements p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+#container2{
+  background-color:rgb(4, 7, 207) ;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 20px;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+#container2:hover{
+  background:black;
+}
+#container3{
+  background-color:rgb(4, 7, 207) ;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+
+
+  #buttons-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.btn {
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn.btn2 {
+    background: #ff0051;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn.btn2:hover {
+    background: pink;
+}
+
+.btn.btn3 {
+    background: #ff0051;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn.btn3:hover {
+    background: pink;
+}
+
+

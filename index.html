@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Personal Portfoli Website</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://kit.fontawesome.com/35e9afc0ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logonew.png" class="logo" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header" onclick="scrollToTop()">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Science Engineering Student</p>
+                <h1>Hi, I'm <span>ANUSREE</span><br>from GECI !!!</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Dedicated software developer with a strong background in designing, coding and passion for developing
+                innovative solutions, seeking a challeng‑
+                ing role in n a dynamic organization where I can apply my technical skills to drive technological
+                advancements and contribute to the company’s
+                growth.</p>
+            <!-- Add more content as needed -->
+        </div>
+    </div>
+    <div id="new-box">
+        <div id="skils">
+            <p>Skills</p>
+        </div>
+        <div id="project">
+            <p>Projects</p>
+        </div>
+        <div id="contact">
+            <p>Contact</p>
+        </div>
+    </div>
+    <div id="achivements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div id="container2">
+            <p>Completed NPTEL java Mooc course</p>
+            </div>
+            <div id="container2">
+                <p>Runner up, pi-Hack</p>
+                </div>
+                <div id="container2">
+                    <p>Completed internship on Data Science and MachineLearning</p>
+                    </div>
+            <!-- Add more content as needed -->
+        </div>
+    </div>
+    <div id="buttons-container">
+        <a href="images/RusselResume (27).pdf" class="btn btn2">Download resume</a>
+    </div>
+    
+
+
+<script>
+    var skillsDiv = document.getElementById("skils");
+    skillsDiv.addEventListener("click", function() {
+        window.location.href = "skills.html";
+    });
+
+
+    var projectDiv = document.getElementById("project");
+    projectDiv.addEventListener("click", function() {
+        window.location.href = "projects.html";
+    });
+
+
+    var contactDiv = document.getElementById("contact");
+    contactDiv.addEventListener("click", function() {
+        window.location.href = "contact.html";
+    });
+
+    function scrollToTop() {
+        const about = document.getElementById("about");
+        about.scrollIntoView({ behavior: "smooth" });
+    }
+
+</script>
+
+</body>
+</html>

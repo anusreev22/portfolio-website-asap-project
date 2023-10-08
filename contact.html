@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Personal Portfoli Website</title>
+  <link rel="stylesheet" href="css4.css">
+  <script src="https://kit.fontawesome.com/35e9afc0ed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-info">
+                        <p style="margin-bottom: 10px;"><i class="fa-solid fa-paper-plane" style="color: #eff0f0;"></i>anusreev22@gmail.com</p>
+                        
+                        <p><i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>9778204873</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="color: #420148;"></i></a>
+                            <a href="https://www.linkedin.com/in/anusree-v-6a6b28234/"><i class="fa-brands fa-linkedin" style="color: #004c7b;"></i></a>
+                            <a href="https://github.com/anusreev22"><i class="fa-brands fa-github" style="color: black;"></i></a>
+                            <a href="index.html" class="btn btncontact">Back</a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <script>
+        
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyWrkogHy-kbgURdtGvIOYNHjhq5u19YQPJE-HMCTEnjkfFY8eWX_XYnoRYSB4vP9Ew/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => {
+                msg.innerHTML="Message sent successfully!!!"
+                setTimeout(function(){
+                  msg.innerHTML=""
+                },5000)
+                form.reset()
+              })
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
+</body>
+</html>
