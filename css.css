@@ -16,7 +16,7 @@
     padding-top: 0px;
       background-image: url(images/bg3.png);
       margin-top: 0;
-      background-size:450px 500px; /* Cover the entire viewport */
+      background-size:550px 650px; /* Cover the entire viewport */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-position: right top; /* Center the image horizontally and vertically */
       margin: 10;
@@ -26,7 +26,13 @@
   
   .container{
     padding: 10px 5%;
+    display: flex;
+    flex-direction: column;
   
+  }
+
+  .logo-links{
+    display: flex;
   }
   
   nav{
@@ -37,8 +43,8 @@
   }
   .logo
   {
-    width:150px;
-    height: 150px;
+    width:400px;
+    height: 400px;
   }
   nav ul li{
     display: inline-block;
@@ -66,12 +72,12 @@
     width: 100%;
   }
   .header-text{
-    margin-top:10%;
-    font-size: 20px;
-    padding-bottom: 20px;
+    /* margin-top:10%; */
+    font-size: 30px;
+    /* padding-bottom: 20px; */
   }
   .header-text h1{
-    font-size: 40px;
+    font-size: 60px;
     margin-top: 10px;
   }
   .header-text h1 span{
@@ -349,3 +355,7 @@
 }
 
 
+#sidemenu{
+  margin-bottom: 250px;
+  margin-left: 250px;
+}
